@@ -124,6 +124,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Semina01.c" />
+    <ClCompile Include="Seminar02.c" />
+    <ClCompile Include="Seminar02Exemplu02.c" />
+    <ClCompile Include="Seminar02Exemplul01.c" />
+    <ClCompile Include="Seminar03.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="carti.txt" />
+    <Text Include="jocuri.txt" />
+    <Text Include="masini.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
