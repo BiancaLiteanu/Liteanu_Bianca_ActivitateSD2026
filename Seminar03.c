@@ -22,23 +22,20 @@ struct Nod {
 Masina citireMasinaDinFisier(FILE* file) {
 	char buffer[100];
 	char sep[3] = ",\n";
-	if (fgets(buffer, 100, file) == NULL) {
-		Masina m = { 0 }; return m;
-	}
+	fgets(buffer, 100, file);
 	char* aux;
 	Masina m1;
 	aux = strtok(buffer, sep);
 	m1.id = atoi(aux);
 	m1.nrUsi = atoi(strtok(NULL, sep));
-	m1.pret = (float)atof(strtok(NULL, sep));
+	m1.pret = atof(strtok(NULL, sep));
+	aux = strtok(NULL, sep);
+	m1.model = malloc(strlen(aux) + 1);
+	strcpy_s(m1.model, strlen(aux) + 1, aux);
 
 	aux = strtok(NULL, sep);
-	m1.model = (char*)malloc(strlen(aux) + 1);
-	strcpy(m1.model, aux);
-
-	aux = strtok(NULL, sep);
-	m1.numeSofer = (char*)malloc(strlen(aux) + 1);
-	strcpy(m1.numeSofer, aux);
+	m1.numeSofer = malloc(strlen(aux) + 1);
+	strcpy_s(m1.numeSofer, strlen(aux) + 1, aux);
 
 	m1.serie = *strtok(NULL, sep);
 	return m1;
@@ -83,17 +80,14 @@ void adaugaMasinaInLista(Nod** cap, Masina masinaNoua) {
 	}
 }
 
-void* citireListaMasiniDinFisier(const char* numeFisier) {
+void* citireListaMasiniDinFisier(const char* numeFisier) { 
 	FILE* file = fopen(numeFisier, "r");
+
 	if (file) {
 		Nod* cap = NULL;
 		while (!feof(file)) {
-			long pos = ftell(file);
-			char test;
-			if (fscanf(file, " %c", &test) == EOF) break;
-			fseek(file, pos, SEEK_SET);
-
 			adaugaMasinaInLista(&cap, citireMasinaDinFisier(file));
+
 		}
 		fclose(file);
 		return cap;
@@ -133,22 +127,34 @@ float calculeazaPretulMasinilorUnuiSofer(Nod* cap, const char* numeSofer) {
 }
 
 void stergeMasiniDinSeria(Nod** cap, char serieCautata) {
-	
+
 	while ((*cap) && (*cap)->info.serie == serieCautata) {
 		Nod* temp = *cap;
 		(*cap) = temp->next;
-		if (temp->info.numeSofer) free(temp->info.numeSofer);
-		if (temp->info.model) free(temp->info.model);
+		if (temp->info.numeSofer) {
+			free(temp->info.numeSofer);
+		}
+		if (temp->info.model) {
+			free(temp->info.model);
+		}
 		free(temp);
 	}
 
 	Nod* p = *cap;
-	while (p && p->next) {
-		if (p->next->info.serie == serieCautata) {
+	while (p) {
+		while (p->next && p->next->info.serie != serieCautata) {
+			p = p->next;
+		}
+		if (p->next) {
 			Nod* temp = p->next;
 			p->next = temp->next;
-			if (temp->info.model) free(temp->info.model);
-			if (temp->info.numeSofer) free(temp->info.numeSofer); 
+
+			if (temp->info.model) {
+				free(temp->info.model);
+			}
+			if (temp->info.numeSofer) {
+				free(temp->info.numeSofer);
+			}
 			free(temp);
 		}
 		else {
