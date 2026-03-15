@@ -1,0 +1,8 @@
+101,3,12.5,Caine,Cookie,F
+102,1,4.2,Pisica,Biscuite,M
+103,10,0.5,Papagal,Mochi,F
+104,5,25.0,Caine,Pufulete,F
+105,2,1.8,Iepure,Tom,M
+106,7,35.2,Caine,Angela,F
+107,4,3.5,Pisica,Bobita,M
+108,1,0.2,Hamster,Kiko,F

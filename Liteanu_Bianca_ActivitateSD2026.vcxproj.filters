@@ -30,7 +30,7 @@
     <ClCompile Include="Seminar03.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ex.c">
+    <ClCompile Include="Seminar03Exemplul01.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,5 +38,6 @@
     <Text Include="masini.txt" />
     <Text Include="carti.txt" />
     <Text Include="jocuri.txt" />
+    <Text Include="animalute.txt" />
   </ItemGroup>
 </Project>

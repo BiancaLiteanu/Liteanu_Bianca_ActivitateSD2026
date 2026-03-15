@@ -123,7 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ex.c" />
+    <ClCompile Include="Seminar03Exemplul01.c" />
     <ClCompile Include="Semina01.c" />
     <ClCompile Include="Seminar02.c" />
     <ClCompile Include="Seminar02Exemplu02.c" />
@@ -131,6 +131,7 @@
     <ClCompile Include="Seminar03.c" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="animalute.txt" />
     <Text Include="carti.txt" />
     <Text Include="jocuri.txt" />
     <Text Include="masini.txt" />
