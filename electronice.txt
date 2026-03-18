@@ -1,0 +1,4 @@
+1,24,3500.5,iPhone_15,Apple,T
+2,12,5200.0,Tableta,Lenovo,L
+3,24,2800.0,Galaxy_S23,Samsung,T
+4,36,4500.9,MacBook_Air,Apple,L

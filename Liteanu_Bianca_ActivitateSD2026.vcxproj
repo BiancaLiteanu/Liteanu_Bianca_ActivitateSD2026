@@ -123,16 +123,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Seminar03Exemplu02.c" />
     <ClCompile Include="Seminar03Exemplul01.c" />
     <ClCompile Include="Semina01.c" />
     <ClCompile Include="Seminar02.c" />
     <ClCompile Include="Seminar02Exemplu02.c" />
     <ClCompile Include="Seminar02Exemplul01.c" />
     <ClCompile Include="Seminar03.c" />
+    <ClCompile Include="Seminar04.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="animalute.txt" />
     <Text Include="carti.txt" />
+    <Text Include="electronice.txt" />
     <Text Include="jocuri.txt" />
     <Text Include="masini.txt" />
   </ItemGroup>

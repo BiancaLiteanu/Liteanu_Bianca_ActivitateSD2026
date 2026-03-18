@@ -33,11 +33,18 @@
     <ClCompile Include="Seminar03Exemplul01.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Seminar04.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar03Exemplu02.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="masini.txt" />
     <Text Include="carti.txt" />
     <Text Include="jocuri.txt" />
     <Text Include="animalute.txt" />
+    <Text Include="electronice.txt" />
   </ItemGroup>
 </Project>
