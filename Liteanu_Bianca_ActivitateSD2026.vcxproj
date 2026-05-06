@@ -135,6 +135,7 @@
     <ClCompile Include="Seminar06.c" />
     <ClCompile Include="Seminar07.c" />
     <ClCompile Include="Seminar08.c" />
+    <ClCompile Include="Seminar09.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="animalute.txt" />
